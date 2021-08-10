@@ -14,7 +14,6 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 644,
 	"height": 329,
-	"title": {"text": "Event Timing", "align": "center"},
 	"data": {"url": "data/event-timing.csv"},
 	"mark": "line",
 	"encoding": {
@@ -27,8 +26,7 @@
 		"field": "percentage",
 		"type": "quantitative",
 		"format": ".2f",
-		"title": "%",
-		"titlePadding": 10
+		"title": {"text": "% Event Timing", "offset": 50}
 	    }
 	}
       };
