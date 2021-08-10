@@ -7,11 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   </head>
   <body>
-    <div id="vis"></div>
+    <div id="vis1"></div>
 
     <script type="text/javascript" crossorigin="anonymous">
       var yourVlSpec = {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": 644,
+        "height": 329,
+	"title": {"text": "Event Timing", "align": "left"},  
 	"data": {"url": "data/event-timing.csv"},
 	"mark": "line",
 	"encoding": {
@@ -19,7 +22,8 @@
 	  "y": {"field": "percentage", "type": "quantitative", "format": ".2f" }
 	}
       };
-      vegaEmbed('#vis', yourVlSpec);
+      vegaEmbed('#vis1', yourVlSpec);
     </script>
+    
   </body>
 </html>
