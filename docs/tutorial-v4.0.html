@@ -14,20 +14,20 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 644,
 	"height": 329,
-	"title": {"text": "Event Timing", "align": "left"},
+	"title": {"text": "Event Timing", "align": "center"},
 	"data": {"url": "data/event-timing.csv"},
 	"mark": "line",
 	"encoding": {
 	    "x": {
 		"field": "submission_date"
 		"timeUnit": "month",
-		"axis": {"offset": 10, "labels": false}
+		"axis": {"labels": false}
 	    },
 	    "y": {
 		"field": "percentage",
 		"type": "quantitative",
-		"format": ".2f"
-		"axis": {"offset": 10, "labels": false}
+		"format": ".2f",
+		"axis": {"offset": 10, "labels": true}
 	    }
 	}
       };
