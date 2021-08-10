@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>mozilla-use-counters | Mozilla Use Counters</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="mozilla-use-counters" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mozilla Use Counters" />
+<meta property="og:description" content="Mozilla Use Counters" />
+<link rel="canonical" href="https://bdekoz.github.io/mozilla-use-counters/" />
+<meta property="og:url" content="https://bdekoz.github.io/mozilla-use-counters/" />
+<meta property="og:site_name" content="mozilla-use-counters" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="mozilla-use-counters" />
+<script type="application/ld+json">
+{"description":"Mozilla Use Counters","url":"https://bdekoz.github.io/mozilla-use-counters/","@type":"WebSite","headline":"mozilla-use-counters","name":"mozilla-use-counters","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/mozilla-use-counters/assets/css/style.css?v=6931d8d645d126f4aab9b5b87ba834fa76ff4854">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/mozilla-use-counters/favicon.ico" -->
+
+<!-- end custom head snippets -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+      <h1><a href="https://bdekoz.github.io/mozilla-use-counters/">mozilla-use-counters</a></h1>
+
+
+      <p>Once a week, Mozilla provides information about <em>use counters</em> in release versions of Firefox, the web browser.</p>
+    </div>
+
+    <div id="vis1"></div>
+    <script type="text/javascript" crossorigin="anonymous">
+      var yourVlSpec = {
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 644,
+	"height": 329,
+	"data": {"url": "data/event-timing.csv"},
+	"mark": "line",
+	"encoding": {
+	    "x": {
+		"field": "submission_date",
+		"timeUnit": "month",
+		"title": ""
+	    },
+	    "y": {
+		"field": "percentage",
+		"type": "quantitative",
+		"format": ".2f",
+		"title": "% Event Timing",
+		"axis": {"titleFontWeight": 700, "titleFontSize": 14, "titleX": -50}
+	    }
+	}
+      };
+      vegaEmbed('#vis1', yourVlSpec);
+    </script>
+
+    <div id="vis2"></div>
+    <script type="text/javascript" crossorigin="anonymous">
+      var yourVlSpec = {
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 644,
+	"height": 329,
+	"data": {"url": "data/long-task-timing.csv"},
+	"mark": "line",
+	"encoding": {
+	    "x": {
+		"field": "submission_date",
+		"timeUnit": "month",
+		"title": ""
+	    },
+	    "y": {
+		"field": "percentage",
+		"type": "quantitative",
+		"format": ".2f",
+		"title": "% Long Task Timing",
+		"axis": {"titleFontWeight": 700, "titleFontSize": 14, "titleX": -50}
+	    }
+	}
+      };
+      vegaEmbed('#vis2', yourVlSpec);
+    </script>
+
+    <div id="vis3"></div>
+    <script type="text/javascript" crossorigin="anonymous">
+      var yourVlSpec = {
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 644,
+	"height": 329,
+	"data": {"url": "data/paint-timing.csv"},
+	"mark": "line",
+	"encoding": {
+	    "x": {
+		"field": "submission_date",
+		"timeUnit": "month",
+		"title": ""
+	    },
+	    "y": {
+		"field": "percentage",
+		"type": "quantitative",
+		"format": ".2f",
+		"title": "% Paint Timing",
+		"axis": {"titleFontWeight": 700, "titleFontSize": 14, "titleX": -50}
+	    }
+	}
+      };
+      vegaEmbed('#vis3', yourVlSpec);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+
+
+  </body>
+</html>
